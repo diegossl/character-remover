@@ -1,0 +1,26 @@
+{
+  "name": "clear-string",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegossl/clear-string.git"
+  },
+  "keywords": [
+    "string"
+  ],
+  "author": "Diego Lourenco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegossl/clear-string/issues"
+  },
+  "homepage": "https://github.com/diegossl/clear-string#readme",
+  "devDependencies": {
+    "tape": "^5.0.1"
+  }
+}
