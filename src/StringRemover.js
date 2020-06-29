@@ -47,6 +47,17 @@ module.exports = {
       text = text.replace(regex, "")
     }
     return text
+  },
+
+  removeExtraSpaces (text) {
+    text = text.trim().split(" ")
+    var newText = text.filter(function(item, i) {
+      if (item != " ") {
+        text.slice(i, 1)
+      }
+      return item
+    }).join(" ")
+    return newText
   }
 
 }
