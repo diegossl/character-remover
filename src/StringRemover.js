@@ -8,56 +8,71 @@ const {
 module.exports = {
 
   removeAccents (text) {
-    for (let char in hexadecimalAccentsMap ) {
-      let regex = hexadecimalAccentsMap[char]
-      text = text.replace(regex, char)
+    if (text) {
+      for (let char in hexadecimalAccentsMap ) {
+        let regex = hexadecimalAccentsMap[char]
+        text = text.replace(regex, char)
+      }
+      return text
     }
-    return text
+    return null
   },
 
   removeAll (text) {
-    for (let char in specialCharactersMaps ) {
-      let regex = specialCharactersMaps[char]
-      text = text.replace(regex, "")
+    if (text) {
+      for (let char in specialCharactersMaps ) {
+        let regex = specialCharactersMaps[char]
+        text = text.replace(regex, "")
+      }
+      return text
     }
-    return text
+    return null
   },
 
   removeOnly (text, chars = []) {
-    for (let char in chars) {
-      let validatedChar = Validator.validate(chars[char])
-      let regex = new RegExp(validatedChar, "g")
-      text = text.replace(regex, "")
+    if (text && chars.length > 0) {
+      for (let char in chars) {
+        let validatedChar = Validator.validate(chars[char])
+        let regex = new RegExp(validatedChar, "g")
+        text = text.replace(regex, "")
+      }
+      return text
     }
-    return text
+    return null
   },
 
   removeExcept (text, chars = []) {
-    const testRegex = new RegExp(completeAlphabet)
-    var specialChars = []
-
-    for (var key in text) {
-      if (chars.indexOf(text[key]) === -1 && !testRegex.test(text[key])) {
-        specialChars.push(text[key])
+    if (text && chars.length > 0) {
+      const testRegex = new RegExp(completeAlphabet)
+      var specialChars = []
+  
+      for (var key in text) {
+        if (chars.indexOf(text[key]) === -1 && !testRegex.test(text[key])) {
+          specialChars.push(text[key])
+        }
       }
+      for (let char in specialChars) {
+        let validatedChar = Validator.validate(specialChars[char])
+        let regex = new RegExp(validatedChar, "g")
+        text = text.replace(regex, "")
+      }
+      return text
     }
-    for (let char in specialChars) {
-      let validatedChar = Validator.validate(specialChars[char])
-      let regex = new RegExp(validatedChar, "g")
-      text = text.replace(regex, "")
-    }
-    return text
+    return null
   },
 
   removeExtraSpaces (text) {
-    text = text.trim().split(" ")
-    var newText = text.filter(function(item, i) {
-      if (item != " ") {
-        text.slice(i, 1)
-      }
-      return item
-    }).join(" ")
-    return newText
+    if (text) {
+      text = text.trim().split(" ")
+      var newText = text.filter(function(item, i) {
+        if (item != " ") {
+          text.slice(i, 1)
+        }
+        return item
+      }).join(" ")
+      return newText
+    }
+    return null
   }
 
 }
