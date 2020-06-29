@@ -30,9 +30,9 @@ test('Remove only a few special characters', function (s) {
 })
 
 test('Remove all special characters except', function (s) {
-	let input = 'Olá *-*. Tudo bem?'
-  let output = stringRemover.removeExcept(input, ['-', '.', ' ', '?'])
-	let expected = 'Olá -. Tudo bem?'
+	let input = 'Olá *-*. / %~Tudo bem?'
+  let output = stringRemover.removeExcept(input, ['?', '.', ' '])
+	let expected = 'Olá .  Tudo bem?'
 
 	s.same(output, expected)
 	s.end()

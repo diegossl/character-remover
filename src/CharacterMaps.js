@@ -49,4 +49,11 @@ const RegexReservedChars = [
   '.'
 ]
 
-module.exports = { hexadecimalAccentsMap, specialCharactersMaps, RegexReservedChars }
+const completeAlphabet = /[A-Za-záàâãéèêëíìïîóòôõöúûùüçñÁÀÂÃÉÊÈËÍÌÏÎÓÒÔÕÖÚÛÙÜÇÑ]/
+
+module.exports = { 
+  hexadecimalAccentsMap,
+  specialCharactersMaps,
+  RegexReservedChars,
+  completeAlphabet 
+}
