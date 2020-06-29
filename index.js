@@ -1,1 +1,1 @@
-module.exports = require('./src/StringRemove')
+module.exports = require('./src/StringRemover')

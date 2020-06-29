@@ -1,7 +1,7 @@
+const Validator = require('./Validator')
 const { 
   hexadecimalAccentsMap,
   specialCharactersMaps,
-  RegexReservedChars
 } = require('./CharacterMaps')
 
 module.exports = {
@@ -22,30 +22,17 @@ module.exports = {
     return text
   },
 
-  removeOnly (text, chars =[]) {
+  removeOnly (text, chars = []) {
     for (let char in chars) {
-      var oldChar = chars[char]
-      oldChar = `${oldChar}`
-      if (RegexReservedChars.indexOf(oldChar) > -1) {
-        oldChar = `\\${oldChar}`
-      }
-      let regex = new RegExp(oldChar, "g")
+      let regex = null
+      let validatedChar = Validator.validate(chars[char])      
+      regex = new RegExp(validatedChar, "g")
       text = text.replace(regex, "")
     }
     return text
   },
 
   removeExcept (text, chars = []) {
-    for (let char in chars) {
-      var oldChar = chars[char]
-      oldChar = `${oldChar}`
-      if (RegexReservedChars.indexOf(oldChar) > -1) {
-        oldChar = `\\${oldChar}`
-      }
-      let regex = new RegExp(oldChar, "g")
-      text = text.replace(regex, "")
-    }
-    return text
   }
 
 }
