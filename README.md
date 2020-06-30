@@ -1,6 +1,6 @@
 # Removedor de Strings especiais
 
-Essa bibliteca, escrita em JavaScript, tem a finalizade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).
+Essa biblioteca, escrita em JavaScript, tem a finalidade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).
 
 ## Features
 
