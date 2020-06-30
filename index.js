@@ -1,1 +1,1 @@
-module.exports = require('./src/StringRemover')
+module.exports = require('./src/CharacterRemover')

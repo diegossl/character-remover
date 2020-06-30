@@ -1,10 +1,16 @@
-# Removedor de Strings especiais
+# Removedor de caracteres
 
-Essa biblioteca, escrita em JavaScript, tem a finalidade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).
+Essa biblioteca tem a finalidade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).
+
+## Uso
+
+```javascript
+const CharacterRemover = require('character-remover') 
+```
 
 ## Features
 
-A biblioteca possui 5 métodos, que são:
+A biblioteca possui as seguintes funcionalidades:
 
 ```javascript
   /*

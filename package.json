@@ -1,5 +1,5 @@
 {
-  "name": "string-remover",
+  "name": "character-remover",
   "version": "1.0.1",
   "description": "Essa biblioteca tem a finalidade de tratar strings removendo ou subistituindo caracteres específicos ou genericos, que estejam dentro do padrão UTF-8 (Hexadecimal).",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/diegossl/clear-string.git"
   },
   "keywords": [
-    "string"
+    "string","character-remover", "text", "caractere"
   ],
   "author": "diegossl",
   "license": "MIT",
