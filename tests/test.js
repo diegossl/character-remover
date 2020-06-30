@@ -20,9 +20,9 @@ test('Test with null entry to remove all accents', function (s) {
 })
 
 test('Test to remove all special characters', function (s) {
-  let input = '  ]-{&  } --- //          %   [~ Olá *-*. Tudo {[ bem?'
+  let input = '  ]-{&  } --- //          %   [~ Hello *-*. How {[ are you?'
 	let output = CharacterRemover.removeAll(input)
-	let expected = 'OláTudobem'
+	let expected = 'HelloHowareyou'
 
 	s.same(output, expected)
 	s.end()
@@ -38,9 +38,9 @@ test('Test with null entry to remove all special characters', function (s) {
 })
 
 test('Test to remove only selected special characters', function (s) {
-  let input = 'Olá *-*. Tudo bem?'
+  let input = 'Hello *-*. How are you?'
 	let output = CharacterRemover.removeOnly(input, ['*', '-'])
-	let expected = 'Olá . Tudo bem?'
+	let expected = 'Hello . How are you?'
 
 	s.same(output, expected)
 	s.end()
@@ -65,9 +65,9 @@ test('Test to remove only special characters without selecting them', function (
 })
 
 test('Test to remove all special characters except the selected ones', function (s) {
-	let input = '  ]-{&  } --- //;          %   [~ Olá *-*. Tudo {[ bem?'
+	let input = '  ]-{&  } --- //          %   [~ Hello *-*. How {[ are you?'
   let output = CharacterRemover.removeExcept(input, ['?', '.', ' '])
-	let expected = '                    Olá . Tudo  bem?'
+	let expected = '                    Hello . How  are you?'
 
 	s.same(output, expected)
 	s.end()
@@ -83,7 +83,7 @@ test('Test with null entry to remove all special characters except selected ones
 })
 
 test('Test to remove all special characters except the selected ones, without selecting them', function (s) {
-	let input = '  ]-{&  } --- //;          %   [~ Olá *-*. Tudo {[ bem?'
+	let input = '  ]-{&  } --- //          %   [~ Hello *-*. How {[ are you?'
   let output = CharacterRemover.removeExcept(input, [])
 	let expected = null
 
@@ -92,9 +92,9 @@ test('Test to remove all special characters except the selected ones, without se
 })
 
 test('Test to remove all extra spaces', function (s) {
-	let input = '                    Olá.                Tudo      bem?'
+	let input = '                    Hello.                How are      you?'
   let output = CharacterRemover.removeExtraSpaces(input)
-	let expected = 'Olá. Tudo bem?'
+	let expected = 'Hello. How are you?'
 
 	s.same(output, expected)
 	s.end()

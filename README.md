@@ -1,8 +1,8 @@
-# Removedor de caracteres
+# Character Remover
 
-Essa biblioteca tem a finalidade de tratar strings removendo ou subistituindo, de forma genérica ou específica, caracteres que estejam dentro do padrão UTF-8.
+This library has the purpose of treating strings by removing or replacing, in a generic or specific way, characters that are within the UTF-8 standard.
 
-## Uso
+## Use
 
 ```javascript
 const CharacterRemover = require('character-remover') 
@@ -10,52 +10,52 @@ const CharacterRemover = require('character-remover')
 
 ## Features
 
-A biblioteca possui as seguintes funcionalidades:
+The library has the following features:
 
 ```javascript
   /*
-    Nome: removeAccents
-    Descrição: Remove todos os acentos de uma string.
-    parametro: text = 'áàâãäéèêëíìïîóòôõöúûùüçñÁÀÂÃÄÉÊÈËÍÌÏÎÓÒÔÕÖÚÛÙÜÇÑ'
-    saída: 'aaaaaeeeeiiiiooooouuuucnAAAAAEEEEIIIIOOOOOUUUUCN'
+    Name: removeAccents
+    Description: Removes all accents from a string.
+    Parameter: text = 'áàâãäéèêëíìïîóòôõöúûùüçñÁÀÂÃÄÉÊÈËÍÌÏÎÓÒÔÕÖÚÛÙÜÇÑ'
+    Output: 'aaaaaeeeeiiiiooooouuuucnAAAAAEEEEIIIIOOOOOUUUUCN'
   */
   removeAccents (text)
 
   /*
-    Nome: removeAll
-    Descrição: Remove todos os caracteres especiais de uma string.
-    parametro: text = '  ]-{&  } --- //          %   [~ Olá *-*. Tudo {[ bem?'
-    saída: 'OláTudobem'
+    Name: removeAll
+    Description: Removes all special characters from a string.
+    Parameter: text = '  ]-{&  } --- //          %   [~ Hello *-*. How {[ are you?'
+    Output: 'HelloHowareyou'
   */
   removeAll (text)
 
   /*
-    Nome: removeOnly
-    Descrição: Remove de uma string somente os caracteres especiais selecionados.
-    parametro 1: text = 'Olá *-*. Tudo bem?'
-    parametro 2: chars = ['*', '-']
-    saída: 'Olá . Tudo bem?'
+    Name: removeOnly
+    Description: Removes only selected special characters from a string.
+    Parameter 1: text = 'Hello *-*. How are you?'
+    Parameter 2: chars = ['*', '-']
+    Output: 'Hello . How are you?'
   */
   removeOnly (text, chars = [])
 
   /*
-    Nome: removeExcept
-    Descrição: Remove de uma string todos os caracteres especiais, exceto os selecionados.
-    parametro 1: text = '  ]-{&  } --- //;          %   [~ Olá *-*. Tudo {[ bem?'
-    parametro 2: chars = ['?', '.', ' ']
-    saída: '                    Olá . Tudo  bem?'
+    Name: removeExcept
+    Description: Removes all the special characters except the selected ones from a string.
+    Parameter 1: text = '  ]-{&  } --- //          %   [~ Hello *-*. How {[ are you?'
+    Parameter 2: chars = ['?', '.', ' ']
+    Output: '                    Hello . How  are you?'
   */
   removeExcept (text, chars = [])
 
   /*
-    Nome: removeExtraSpaces
-    Descrição: Remove todos os espaços extras de uma string.
-    parametro: text = '                    Olá.                Tudo      bem?'
-    saída: 'Olá. Tudo bem?'
+    Name: removeExtraSpaces
+    Description: Removes all extra spaces from a string.
+    Parameter: text = '                    Hello.                How are      you?'
+    Output: 'Hello. How are you?'
   */
   removeExtraSpaces (text)
 ```
 
-# Licença
+# License
 
 MIT
