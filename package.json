@@ -1,7 +1,7 @@
 {
   "name": "string-remover",
   "version": "1.0.0",
-  "description": "Essa bibliteca tem a finalizade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).",
+  "description": "Essa biblioteca tem a finalidade de tratar strings removendo ou subistituindo caracteres específicos ou genericos, que estejam dentro do padrão UTF-8 (Hexadecimal).",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -15,7 +15,7 @@
     "string"
   ],
   "author": "diegossl",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/diegossl/clear-string/issues"
   },
