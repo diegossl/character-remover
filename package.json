@@ -22,5 +22,6 @@
   "homepage": "https://github.com/diegossl/clear-string#readme",
   "devDependencies": {
     "tape": "^5.0.1"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
