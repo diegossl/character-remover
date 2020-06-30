@@ -1,10 +1,9 @@
 const test = require('tape')
-const StringRemover = require('../index')
-const stringRemover = require('../index')
+const CharacterRemover = require('../index')
 
 test('Test to remove all accents', function (s) {
   let input = 'áàâãäéèêëíìïîóòôõöúûùüçñÁÀÂÃÄÉÊÈËÍÌÏÎÓÒÔÕÖÚÛÙÜÇÑ'
-	let output = StringRemover.removeAccents(input)
+	let output = CharacterRemover.removeAccents(input)
 	let expected = 'aaaaaeeeeiiiiooooouuuucnAAAAAEEEEIIIIOOOOOUUUUCN'
 
 	s.same(output, expected)
@@ -13,7 +12,7 @@ test('Test to remove all accents', function (s) {
 
 test('Test with null entry to remove all accents', function (s) {
   let input = ''
-	let output = StringRemover.removeAccents(input)
+	let output = CharacterRemover.removeAccents(input)
 	let expected = null
 
 	s.same(output, expected)
@@ -22,7 +21,7 @@ test('Test with null entry to remove all accents', function (s) {
 
 test('Test to remove all special characters', function (s) {
   let input = '  ]-{&  } --- //          %   [~ Olá *-*. Tudo {[ bem?'
-	let output = StringRemover.removeAll(input)
+	let output = CharacterRemover.removeAll(input)
 	let expected = 'OláTudobem'
 
 	s.same(output, expected)
@@ -31,7 +30,7 @@ test('Test to remove all special characters', function (s) {
 
 test('Test with null entry to remove all special characters', function (s) {
   let input = ''
-	let output = StringRemover.removeAll(input)
+	let output = CharacterRemover.removeAll(input)
 	let expected = null
 
 	s.same(output, expected)
@@ -40,7 +39,7 @@ test('Test with null entry to remove all special characters', function (s) {
 
 test('Test to remove only selected special characters', function (s) {
   let input = 'Olá *-*. Tudo bem?'
-	let output = StringRemover.removeOnly(input, ['*', '-'])
+	let output = CharacterRemover.removeOnly(input, ['*', '-'])
 	let expected = 'Olá . Tudo bem?'
 
 	s.same(output, expected)
@@ -49,7 +48,7 @@ test('Test to remove only selected special characters', function (s) {
 
 test('Test with null entry to remove only selected special characters', function (s) {
   let input = ''
-	let output = StringRemover.removeOnly(input, ['*', '-'])
+	let output = CharacterRemover.removeOnly(input, ['*', '-'])
 	let expected = null
 
 	s.same(output, expected)
@@ -58,7 +57,7 @@ test('Test with null entry to remove only selected special characters', function
 
 test('Test to remove only special characters without selecting them', function (s) {
   let input = ''
-	let output = StringRemover.removeOnly(input, [])
+	let output = CharacterRemover.removeOnly(input, [])
 	let expected = null
 
 	s.same(output, expected)
@@ -67,7 +66,7 @@ test('Test to remove only special characters without selecting them', function (
 
 test('Test to remove all special characters except the selected ones', function (s) {
 	let input = '  ]-{&  } --- //;          %   [~ Olá *-*. Tudo {[ bem?'
-  let output = stringRemover.removeExcept(input, ['?', '.', ' '])
+  let output = CharacterRemover.removeExcept(input, ['?', '.', ' '])
 	let expected = '                    Olá . Tudo  bem?'
 
 	s.same(output, expected)
@@ -76,7 +75,7 @@ test('Test to remove all special characters except the selected ones', function 
 
 test('Test with null entry to remove all special characters except selected ones', function (s) {
 	let input = ''
-	let output = stringRemover.removeExcept(input, ['?', '.', ' '])
+	let output = CharacterRemover.removeExcept(input, ['?', '.', ' '])
 	let expected = null
 
 	s.same(output, expected)
@@ -85,7 +84,7 @@ test('Test with null entry to remove all special characters except selected ones
 
 test('Test to remove all special characters except the selected ones, without selecting them', function (s) {
 	let input = '  ]-{&  } --- //;          %   [~ Olá *-*. Tudo {[ bem?'
-  let output = stringRemover.removeExcept(input, [])
+  let output = CharacterRemover.removeExcept(input, [])
 	let expected = null
 
 	s.same(output, expected)
@@ -94,7 +93,7 @@ test('Test to remove all special characters except the selected ones, without se
 
 test('Test to remove all extra spaces', function (s) {
 	let input = '                    Olá.                Tudo      bem?'
-  let output = stringRemover.removeExtraSpaces(input)
+  let output = CharacterRemover.removeExtraSpaces(input)
 	let expected = 'Olá. Tudo bem?'
 
 	s.same(output, expected)
@@ -103,7 +102,7 @@ test('Test to remove all extra spaces', function (s) {
 
 test('Test with null entry to remove all extra spaces', function (s) {
 	let input = ''
-  let output = stringRemover.removeExtraSpaces(input)
+  let output = CharacterRemover.removeExtraSpaces(input)
 	let expected = null
 
 	s.same(output, expected)

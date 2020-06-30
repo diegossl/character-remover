@@ -9,17 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegossl/clear-string.git"
+    "url": "git+https://github.com/diegossl/character-remover.git"
   },
   "keywords": [
-    "string","character-remover", "text", "caractere"
+    "string",
+    "character-remover",
+    "text",
+    "caractere"
   ],
   "author": "diegossl",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diegossl/clear-string/issues"
+    "url": "https://github.com/diegossl/character-remover/issues"
   },
-  "homepage": "https://github.com/diegossl/clear-string#readme",
+  "homepage": "https://github.com/diegossl/character-remover#readme",
   "devDependencies": {
     "tape": "^5.0.1"
   }
