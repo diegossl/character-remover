@@ -1,6 +1,6 @@
 # Removedor de caracteres
 
-Essa biblioteca tem a finalidade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).
+Essa biblioteca tem a finalidade de tratar strings removendo ou subistituindo, de forma genérica ou específica, caracteres que estejam dentro do padrão UTF-8.
 
 ## Uso
 
