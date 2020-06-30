@@ -1,7 +1,7 @@
 {
   "name": "string-remover",
   "version": "1.0.0",
-  "description": "",
+  "description": "Essa bibliteca tem a finalizade de tratar strings removendo ou subistituindo caracteres específicos ou genericos que estejam dentro do padrão UTF-8 (Hexadecimal).",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
